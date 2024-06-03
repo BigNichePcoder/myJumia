@@ -1,0 +1,12 @@
+@function rem($pixel){
+  //divide $pixels by 16 to return rem
+  // throw an error if the $pixel has a unit
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  }
+  @else {
+   
+    @error 'Dont use unit when using the rem() function; only numbers' 
+  }
+  
+  }
