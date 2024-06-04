@@ -1,18 +1,24 @@
 @use '../utils/' as u;
 
 header  {
- width: 100%;
  background: var(--lightgraycolor);
 }
 
 
 .middle {
- 
   @include u.myflex(row);
   background: var(--lightgraycolor);
   align-items: center;
   font-size: u.rem(12);
   padding: u.rem(4) u.rem(8);
+
+  @include u.breakpointmax(phone) {
+    display: none;
+  }
+
+  @include u.breakpoint(medium) {
+    display: flex;
+  }
 
   &__start {
     @include u.myflex(row);
@@ -52,7 +58,6 @@ header  {
     width: 62%;
     flex-basis: 62%;
     justify-content: center;
-    gap: 40px;
     position: relative;
 
     .middle__centerjumialogo {
@@ -60,7 +65,8 @@ header  {
       font-weight: 700;
       position: absolute;
       top: 5px;
-      right: 59%;
+
+      right: 60%;
       
 
       .iconbackground{
@@ -69,7 +75,7 @@ header  {
           & .checked {
             position: absolute;
             font-size: u.rem(7);
-            top: 5px;
+            top: 4px;
             left: 1px;
             color: var(--whitecolor);
 
@@ -86,6 +92,7 @@ header  {
     }
 
     .middle___centershield {
+      padding-left: 15px;
       .iconbackground2 {
        position: relative;
        right: 10px;
@@ -122,10 +129,11 @@ header  {
       font-weight: 600;
       top: u.rem(4);
       left: 18px;
-      
+      color: rgb(205, 205, 205);
     }
   }
 }
+
 
 
 

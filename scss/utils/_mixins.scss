@@ -1,13 +1,13 @@
 // 700, 900, 1440;
 $breakpoints: (
-  small: 20em,
-  "medium" : 48em,
+  'small': 20em,
+  "medium" : 47.94em,
   "large" : 64em,
   "xlarge" : 90em,
 );
 
 $max: (
-  'phone': 47.94em,
+  'phone': 47.93em,
   'tablet': 63.94em,
   'desktop': 79.94em,
 );
@@ -33,7 +33,7 @@ $max: (
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
   grid-template-rows: repeat($rows, 1fr);
-};
+}; 
 
 
 @mixin breakpointup($size) {
