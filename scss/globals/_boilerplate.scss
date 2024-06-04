@@ -1,0 +1,31 @@
+@use 'fonts' as fm;
+@use '../utils/' as u;
+
+html, *, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+min-height: 100%;
+
+}
+
+
+body {
+  font-family: fm.$fm;
+  font-size: 100%;
+  background: var(--greencolor);
+  min-width: u.rem(950);
+  min-height: 100%;
+  color: var(--optionalbackground);
+  background-color: blue;
+}
+
+.jm {
+  min-height: 100vh;
+  @include u.myflex(column);
+  background: red;
+  flex-grow: 1 0;
+
+  
+}

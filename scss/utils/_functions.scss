@@ -1,3 +1,4 @@
+@use 'sass:math';
 @function rem($pixel){
   //divide $pixels by 16 to return rem
   // throw an error if the $pixel has a unit
