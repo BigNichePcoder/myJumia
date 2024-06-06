@@ -15,17 +15,21 @@ body {
   font-family: fm.$fm;
   font-size: 100%;
   background: var(--greencolor);
-  min-width: u.rem(950);
   min-height: 100%;
   color: var(--optionalbackground);
-  background-color: blue;
+  background-color: var(--optionalbackground);
+ 
 }
 
 .jm {
+ 
   min-height: 100vh;
   @include u.myflex(column);
-  background: red;
   flex-grow: 1 0;
 
+
+  @include u.breakpoint(medium) {
+    width: 100%;
+  }
   
 }

@@ -2,15 +2,17 @@
 
 header  {
  background: var(--lightgraycolor);
+ width: 100%;
 }
 
 
 .middle {
   @include u.myflex(row);
   background: var(--lightgraycolor);
+  justify-content: flex-start;
   align-items: center;
   font-size: u.rem(12);
-  padding: u.rem(4) u.rem(8);
+  padding: u.rem(0) u.rem(8);
 
   @include u.breakpointmax(phone) {
     display: none;
@@ -18,27 +20,40 @@ header  {
 
   @include u.breakpoint(medium) {
     display: flex;
+    padding: u.rem(10);
   }
 
   &__start {
     @include u.myflex(row);
-    width: 18%;
-    max-width: 18%;
+    width: 15%;
+    flex-basis: 15%;
+    max-width: 15%;
     color: var(--orangecolor);
     justify-content: flex-start;
+
+   @include u.breakpoint(large) {
+     width: 50%;
+     flex-basis: 50%;
+     max-width: 50%;
+     justify-content: center;
+    }
   
 
     .middle__startlogo {
-      background: var(--orangecolor);
-      border-radius: 50%;
-      margin-right: 4px;
+     
+      position: relative;
 
       & .checked {
-        font-size: u.rem(12);
-        color: var(--whitecolor); 
-        padding: u.rem(1) u.rem(2);
-        vertical-align: middle;
+        color: var(--whitecolor);
+        border-radius: 50%;
+        margin-right: 4px;
+        font-size: u.rem(10);
         
+      &::before {
+        background-color: var(--orangecolor); 
+        padding: u.rem(1);
+        border-radius: 50%;
+      }
       }
       
     }
@@ -55,18 +70,30 @@ header  {
   &__center {
     @include u.myflex(row);
     font-size: 20px;
-    width: 62%;
-    flex-basis: 62%;
-    justify-content: center;
-    position: relative;
+    width: 60%;
+    flex-basis: 60%;
+    max-width: 60%;
+    justify-content: flex-start;
+    margin-left: 50px;
+    align-items: center;
+    
+
+    @include u.breakpoint(medium) {
+      width: 50%;
+      justify-content: center;
+    }
+
+    @include u.breakpoint(large) {
+      justify-content: flex-start;
+      width: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+    }
 
     .middle__centerjumialogo {
-      font-size: u.rem(12);
-      font-weight: 700;
-      position: absolute;
-      top: 5px;
-
-      right: 60%;
+      font-size: u.rem(14);
+      font-weight: 800;
+    
       
 
       .iconbackground{
@@ -75,7 +102,7 @@ header  {
           & .checked {
             position: absolute;
             font-size: u.rem(7);
-            top: 4px;
+            top: 7px;
             left: 1px;
             color: var(--whitecolor);
 
@@ -92,21 +119,26 @@ header  {
     }
 
     .middle___centershield {
-      padding-left: 15px;
+
       .iconbackground2 {
-       position: relative;
-       right: 10px;
+        position: relative;
+        bottom: 3px;
+        left: u.rem(30);
+
+
+
         .fa-shield {
-          margin-right: 3px;
+          font-size: 14px;
+          margin-right: 5px;
           color: rgba(148, 147, 147, 0.542);
-          
+
         }
 
         .sec {
           position: absolute;
-          font-size: u.rem(8);
-          top: u.rem(7);
-          left: u.rem(9);
+          font-size: u.rem(6);
+          top: u.rem(12);
+          left: u.rem(6);
           color: rgb(205, 205, 205);
         
 
@@ -124,16 +156,268 @@ header  {
     }
 
     .pay-logo {
-      position: absolute;
+     
       font-size: u.rem(14);
       font-weight: 600;
-      top: u.rem(4);
-      left: 18px;
+      margin-left: -5px;
       color: rgb(205, 205, 205);
     }
   }
 }
 
 
+.nav {
+  background: var(--whitecolor);
 
+  nav {
+    @include u.myflex(row);
+    
+    padding: u.rem(10);
+    
+    align-items: center;
+    flex-shrink: 0;
+  
+   @include u.breakpoint(medium) {
+
+
+    } 
+
+    @include u.breakpoint(large) {
+      background: green;
+      
+      margin-inline: auto;
+    
+      } 
+    
+
+    ul {
+      display: none;
+    }
+  }
+
+  &__left {
+    width: 50%;
+    @include u.myflex(row);
+    gap: 0 u.rem(3);
+    flex-shrink: 0;
+
+    @include u.breakpoint(medium) {
+      width: 20%;
+      
+    }
+
+    @include u.breakpoint(large) {
+      width: 20%;
+      justify-content: center;
+    }
+
+    .ham-btn {
+      background-color: transparent;
+      border: none;
+      width: 30px;
+
+      
+      
+      .hamburger {
+        font-size: u.rem(20);
+      }
+
+      
+    }
+
+    .nav__jumia {
+      font-weight: 700;
+      font-size: u.rem(30);
+
+      @include u.breakpoint(medium) {
+        font-size: u.rem(35);
+      }
+    
+     
+    }
+
+    .st {
+      position: relative;
+      top: 5px;
+      right: 4px;
+      
+      .checked {
+        font-size: 14px;
+        color: var(--whitecolor);
+
+        &::before {
+          background: var(--orangecolor);
+          padding: 3px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__middle {
+    display: none;
+    position: relative;
+  
+    @include u.breakpoint (medium) {
+      display: flex;
+      width: 50%;
+      flex-basis: 50%;
+  
+    }
+
+    @include u.breakpoint(large) {
+      width: 50%;
+    }
+   
+    &-input {
+      border-radius: u.rem(4);
+      padding: u.rem(10);
+      padding-left: u.rem(36);
+      border: 1px solid rgb(187, 187, 187);
+      font-size: u.rem(14);
+      width: 75%;
+      
+    }
+     .search-icon {
+      font-size: u.rem(18);
+      position: absolute;
+      top: u.rem(10);
+      left: u.rem(10);
+      
+    
+    }
+  }
+
+  .search-btn {
+    font-size: 12px;
+    width: u.rem(80);
+    border-radius: 3px;
+    font-weight: 600;
+    padding-right: 30px;
+    color: var(--whitecolor);
+    background-color: var(--orangecolor);
+    border: none;
+    padding-inline: u.rem(14);
+    box-shadow: var(--orange-boxshadow);
+    margin-left: 5px;
+
+  }
+
+}
+
+.bottom__search {
+  width: 100%;
+  display: flex;
+  
+  flex-direction: column;
+  padding: u.rem(5) u.rem(10);
+  padding-bottom: u.rem(10);
+  
+
+  @include u.breakpoint(medium) {
+    display: none;
+  }
+
+
+  &-input-setting {
+    position: relative;
+  }
+
+  &-input {
+    padding: u.rem(10);
+    border-radius: 25px;
+    padding-left: u.rem(38);
+    border: 1px solid rgb(187, 187, 187);
+    width: 100%;
+    font-size: 14px;
+   
+
+  }
+
+  &-icon {
+    font-size: u.rem(18);
+    position: absolute;
+    top: u.rem(8);
+    left: u.rem(10);
+    
+  }
+
+}
+
+.nav__right {
+  @include u.myflex(row);
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 u.rem(10);
+  gap: 0 u.rem(10);
+  margin-top: u.rem(3);
+  font-weight: 100;
+
+
+  @include u.breakpoint(medium) {
+    font-weight: 500;
+    font-size: u.rem(12);
+    justify-content: flex-start;
+    width: 32%;
+    flex-basis: 32%;
+    padding: 0px;
+    margin-right: 10px;
+
+    
+  }
+   
+
+  @include u.breakpoint(large) {
+    
+  }
+
+  & i {
+    font-size: u.rem(20);
+    font-weight: 700;
+
+    @include u.breakpoint(medium) {
+      margin-left: 8px;
+      margin-right: 8px;
+      
+    }
+}
+
+  .help {
+    display: none;
+    @include u.breakpoint(medium) {
+      display: flex;
+
+    }
+  }
+  
+  .arrowcont {
+    display: none;
+    @include u.breakpoint(medium) {
+      display: flex;
+      margin-left: 5px;
+      font-size: u.rem(14);
+      align-items: center;
+
+    }
+
+    .down-arrow {
+      font-size: u.rem(14);
+      margin-left: 8px;
+    }
+       
+  }
+}
+
+.fl {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+
+.account__dropdown {
+  display: none;
+
+}
 

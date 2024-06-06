@@ -1,11 +1,18 @@
 @use '../utils/' as u;
 
 .row {
-  @include u.breakpoint(medium) {
-    width: 62%;
-    max-width: 1184px;  
+
+  @include u.breakpoint(small) {
+    min-width: u.rem(360);
+  
+  }
+  @include u.breakpoint(large) {
+    
+    min-width: u.rem(950);
+    max-width: u.rem(1184);  
     justify-content: center;
     margin-inline: auto;
+
   }
 }
 
