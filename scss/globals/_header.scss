@@ -4,6 +4,16 @@ header  {
  background: var(--lightgraycolor);
 }
 
+.top {
+  width: 100%;
+}
+
+.gif {
+  
+  img {
+    width: 100%;
+  }
+}
 
 .middle {
   @include u.myflex(row);
@@ -357,9 +367,9 @@ header  {
   font-size: u.rem(14);
   font-weight: 100;
   flex-shrink: 0;
-  margin-left: u.rem(15);
+  margin-right: u.rem(15);
 
-  gap: u.rem(1.5);
+  gap: u.rem(8);
  
 
   @include u.breakpoint(medium) {
@@ -368,6 +378,7 @@ header  {
     justify-content: flex-start;
     width: 33%;
     flex-basis: 33%;
+    margin-left: u.rem(15);
 
     padding: 0px;
     
