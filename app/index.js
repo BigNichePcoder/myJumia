@@ -9,9 +9,22 @@ hamBtn.addEventListener('click', ()=> {
 
 const slider = document.querySelector('.slider');
 
+let currentScroll = 0;
+let intervalId;
+const scrollRight = document.querySelector('.slider');
+
+intervalId = setInterval(() => {
+  currentScroll += 350;
+  scrollRight.scrollTo(currentScroll, 0);
+  if (currentScroll >= slider.scrollWidth) {
+   
+    currentScroll = -350;
+  }
+},3000)
 
 
-let slideIndex = 0;
+
+/* let slideIndex = 0;
 
 initSlide()
 function initSlide() {
@@ -47,5 +60,4 @@ slides[slideIndex-1].style.display = 'block';
 
 
 
-
-
+ */

@@ -29,10 +29,9 @@ $max: (
   flex-direction: $direction;
 };
 
-@mixin grid($cols,) {
+@mixin mygrid($cols,) {
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
-  grid-template-rows: repeat($rows, 1fr);
 }; 
 
 

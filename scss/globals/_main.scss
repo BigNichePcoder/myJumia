@@ -3,11 +3,12 @@
 
 main {
 background-color: var(--lightgraycolor);
+width: 100%;
 }
 
 .tagcont {
   background: var(--lightgraycolor);
-  padding-top: u.rem(5);
+  padding-top: u.rem(8);
 
   @include u.breakpoint(medium) {
     display: none;
@@ -23,41 +24,114 @@ background-color: var(--lightgraycolor);
 }
 
 .slider {
- 
-  width:100%;
-  height: auto;
-  overflow-x: scroll;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  
-  max-width: 1184px;
   background-color: var(--whitecolor);
-  margin-bottom: u.rem(8);
-  
+  display: flex;
+  padding: u.rem(10);
+  overflow-x: scroll;
+  gap: u.rem(10);
 
   .slides {
-   padding: u.rem(10);
-   position: relative;
-   margin: u.rem(10);
-   width: 100%;
+    
+    display: block;
   }
 
 
   .slide {
-    object-fit: cover;
-    height: u.rem(200);  
+    
+    width: 80vw;
+    height: 40vw;
   }
 
 
   img {
-    border-radius: u.rem(10);
+    border-radius: u.rem(5);
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100%; 
   }
   
+}
+
+section {
+  background-color: var(--whitecolor);
+  margin-top: u.rem(8);
+  
+}
+
+.nut {
+  @include u.mygrid(4);
+  padding: u.rem(10);
+  gap: u.rem(10) u.rem(8);
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius:  u.rem(5);
+  }
+
+  &__tag {
+    text-align: center;
+    font-size: u.rem(10);
+    padding: u.rem(12) u.rem(5);
+    
+  }
+}
+
+
+.flash-tag {
+  display: none;
+background: var(--redcolor) ;
+display: flex;
+justify-content: space-between;
+padding: u.rem(10);
+color: var(--whitecolor);
+font-size: u.rem(14);
+font-weight: 500;
+
+.time {
+  font-size: u.rem(12);
+  margin-top: u.rem(5);
+}
+}
+
+.flash-con {
+  @include u.mygrid(10);
+  overflow-x: scroll;
+  padding: u.rem(10);
+}
+
+.flash-productcon {
+
+  margin-right: u.rem(5);
+}
+
+.flash-imagecon {
+  width: u.rem(180);
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.initial {
+  text-decoration: line-through;
+  font-size: u.rem(12);
+  display: none;
+}
+
+.flash-name {
+  font-size: u.rem(14);
+  margin-bottom: u.rem(5);
+}
+.flash-amount {
+color: black;
 }
 
 
@@ -73,6 +147,7 @@ background-color: var(--lightgraycolor);
 .grid-cont {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  
 }
 
 .product {
