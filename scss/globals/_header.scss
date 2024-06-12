@@ -248,18 +248,9 @@ header  {
       
     }
 
-    .overlay {
-      display: none;
-      width: 100vw;
-      background: rgba(142, 142, 142, 0.395);
-      position: absolute;
-      top: u.rem(-50);
-      left: u.rem(-10);
-      z-index: 4000;
-      
-    }
+   
    .ul-wrapper {
-    display: none;
+  
       background-color: var(--whitecolor);
       list-style: none;
       width: 85vw;
@@ -273,9 +264,10 @@ header  {
       
       .remove-con {
         padding: u.rem(10);
+        padding-top: u.rem(25);
       }
      .tp {
-     
+      
       .ic {
         margin-right: u.rem(15);
 
@@ -402,10 +394,19 @@ header  {
     padding-inline: u.rem(14);
     box-shadow: var(--orange-boxshadow);
     margin-left: 7px;
-  
-
   }
 
+}
+
+.overlay {
+  display: none;
+  width: 100vw;
+  background: rgba(142, 142, 142, 0.395);
+  position: absolute;
+  top: u.rem(-59);
+  left: u.rem(-10);
+  z-index: 4000;
+  
 }
 
 .bottom__search {
@@ -541,6 +542,11 @@ ul {
   width: 18em;
   z-index: 2000;
 }
-.show {
-  display: inherit;
+
+.appear {
+  display: block;
+}
+
+.disappear {
+  display: none;
 }

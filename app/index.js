@@ -1,10 +1,23 @@
 const hamBtn = document.querySelector('.js-btn-cont');
-const ulHam = document.querySelector('.js-ham-ul');
+const hamDrop = document.querySelector('.ul-wrapper');
+const overlay = document.querySelector('.overlay');
+const cancleham = document.querySelector('.ic');
 
-hamBtn.addEventListener('click', ()=> {
-  hamBtn.style.background = 'green';
-  console.log(ulHam.classList.add('show'));
+
+
+function hamDrops() {
+    overlay.classList.toggle('appear');
+  } 
+  
+  hamBtn.addEventListener('click', hamDrops);
+
+
+cancleham.addEventListener('click', ()=> {
+  overlay.classList.add('disappear');
 });
+
+
+
 
 
 const slider = document.querySelector('.slider');
