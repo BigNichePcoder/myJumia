@@ -23,16 +23,58 @@ width: 100%;
   font-weight: 500;
 }
 
+.split {
+  padding: u.rem(10);
+  width: inherit;
+  @include u.breakpoint(medium) {
+    display: flex;
+    gap: u.rem(10);
+
+  }
+  .split-left {
+    display: none;
+    @include u.breakpoint(medium) {
+      display: block;
+      list-style: none;
+      padding: u.rem(5);
+      font-size: u.rem(14);
+      width: u.rem(200);
+      height: auto;
+      background: var(--whitecolor) ;
+      border-radius: u.rem(5);
+      line-height: u.rem(30);
+      i {
+        margin-right: 3px;
+        font-size: u.rem(12);
+        width: u.rem(20);
+
+      }
+    }
+
+  }
+}
 .slider {
   background-color: var(--whitecolor);
   display: flex;
-  padding: u.rem(10);
   overflow-x: scroll;
+  overflow-y: hidden;
   gap: u.rem(10);
+
+
+  @include u.breakpoint(medium) {
+    overflow-x: hidden;
+  }
 
   .slides {
     
     display: block;
+    
+    @include u.breakpoint(medium) {
+      display: block;
+      height: 100%;
+
+    }
+
   }
 
 
