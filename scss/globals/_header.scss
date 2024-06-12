@@ -245,7 +245,93 @@ header  {
       }
 
       
+      
     }
+
+    .overlay {
+      display: none;
+      width: 100vw;
+      background: rgba(142, 142, 142, 0.395);
+      position: absolute;
+      top: u.rem(-50);
+      left: u.rem(-10);
+      z-index: 4000;
+      
+    }
+   .ul-wrapper {
+    display: none;
+      background-color: var(--whitecolor);
+      list-style: none;
+      width: 85vw;
+      overflow-y: scroll;
+      font-size: u.rem(14);
+      top: 0;
+      bottom: 0;
+
+      
+
+      
+      .remove-con {
+        padding: u.rem(10);
+      }
+     .tp {
+     
+      .ic {
+        margin-right: u.rem(15);
+
+      }
+
+     
+
+      }
+
+      .ni {
+        margin:  auto;
+        vertical-align: 5px;
+      }
+
+      .ul-top {
+        display: flex;
+        justify-content: space-between;
+        padding: u.rem(10);
+
+        & .right {
+          padding-right: u.rem(10);
+          font-weight: 100;
+        }
+
+        .sp {
+          color: var(--orangecolor);
+        }
+      }
+
+      .list-con {
+       
+         li {
+          padding: u.rem(10);
+         }
+
+         i {
+          margin: u.rem(5);
+          font-size: u.rem(20);
+          width: u.rem(25);
+          object-fit: cover;
+          height: auto;
+         }
+      }
+
+      .star {
+        i {
+          color: black;
+        }
+      }
+      
+    } 
+
+   hr {
+    
+
+   }
 
     .nav__jumia {
       font-weight: 700;
