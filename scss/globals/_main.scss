@@ -61,6 +61,7 @@ width: 100%;
   gap: u.rem(10);
 
 
+
   @include u.breakpoint(medium) {
     overflow-x: hidden;
   }
@@ -82,6 +83,7 @@ width: 100%;
     
     width: 80vw;
     height: 40vw;
+
   }
 
 
@@ -126,18 +128,32 @@ section {
 
 
 .flash-tag {
-  display: none;
 background: var(--redcolor) ;
 display: flex;
 justify-content: space-between;
+align-items: center;
 padding: u.rem(10);
 color: var(--whitecolor);
-font-size: u.rem(14);
+font-size: u.rem(16);
 font-weight: 500;
+
+i {
+  font-size: u.rem(22);
+  color: var(--orangecolor);
+}
+
+.flash-tag-right {
+  font-size: u.rem(16);
+}
 
 .time {
   font-size: u.rem(12);
   margin-top: u.rem(5);
+  display: block;
+
+  @include u.breakpoint(medium) {
+    display: flex;
+  }
 }
 }
 
