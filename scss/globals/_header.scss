@@ -2,6 +2,14 @@
 
 header  {
  background: var(--lightgraycolor);
+
+ @include u.breakpoint(large) {
+  max-width: u.rem(1184);
+  
+
+ }
+ 
+
 }
 
 .top {

@@ -3,7 +3,10 @@
 
 main {
 background-color: var(--lightgraycolor);
-width: 100%;
+@include u.breakpoint(large) {
+
+}
+
 }
 
 .tagcont {
@@ -25,11 +28,11 @@ width: 100%;
 
 .split {
   padding: u.rem(10);
-  width: inherit;
+
   @include u.breakpoint(medium) {
     display: flex;
     gap: u.rem(10);
-
+    max-height: u.rem(400);
   }
   .split-left {
     display: none;
@@ -37,16 +40,17 @@ width: 100%;
       display: block;
       list-style: none;
       padding: u.rem(5);
-      font-size: u.rem(14);
+      font-size: u.rem(12);
       width: u.rem(200);
       height: auto;
       background: var(--whitecolor) ;
       border-radius: u.rem(5);
-      line-height: u.rem(30);
+      line-height: u.rem(26);
+      flex-grow: 1;
       i {
         margin-right: 3px;
         font-size: u.rem(12);
-        width: u.rem(20);
+      
 
       }
     }
@@ -58,13 +62,14 @@ width: 100%;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  gap: u.rem(10);
-
+  gap: u.rem(10);  
 
 
   @include u.breakpoint(medium) {
     overflow-x: hidden;
+   
   }
+
 
   .slides {
     
@@ -72,7 +77,11 @@ width: 100%;
     
     @include u.breakpoint(medium) {
       display: block;
+  
       height: 100%;
+      width: 100%;
+
+     
 
     }
 
@@ -83,6 +92,11 @@ width: 100%;
     
     width: 80vw;
     height: 40vw;
+   @include u.breakpoint(medium) {
+    max-height: u.rem(600);
+   }
+
+   
 
   }
 

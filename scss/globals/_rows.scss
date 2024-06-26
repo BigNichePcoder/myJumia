@@ -14,6 +14,12 @@
     max-width: u.rem(1184);  
     justify-content: center;
     margin-inline: auto;
+    width: 50%;
+  }
+
+  @include u.breakpoint(xlarge) {
+    
+    
   }
 }
 
